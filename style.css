@@ -79,6 +79,9 @@ img {
 .about-btns {
   margin-top: 3rem; }
 
+.content {
+  max-width: 70%; }
+
 .slick-next,
 .slick-prev {
   width: 6.3rem;
@@ -168,89 +171,87 @@ img {
     .about .img > img {
       border-radius: 2rem;
       max-height: 60.1rem; }
-  .about .content {
-    max-width: 70%; }
-    .about .content .plan {
-      border: 1px solid #d9a253;
-      border-radius: 1rem;
-      width: 50rem;
-      height: 16.5rem;
-      overflow: hidden; }
-      .about .content .plan-wrp {
+  .about .content .plan {
+    border: 1px solid #d9a253;
+    border-radius: 1rem;
+    width: 50rem;
+    height: 16.5rem;
+    overflow: hidden; }
+    .about .content .plan-wrp {
+      display: flex;
+      gap: 3.7rem;
+      margin: 3rem 0; }
+    .about .content .plan-top {
+      display: flex;
+      height: 10.8rem;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #d9a253; }
+      .about .content .plan-top-left, .about .content .plan-top-right {
+        border-right: 1px solid #d9a253;
+        height: 100%;
+        width: 100%;
         display: flex;
-        gap: 3.7rem;
-        margin: 3rem 0; }
-      .about .content .plan-top {
-        display: flex;
-        height: 10.8rem;
         align-items: center;
         justify-content: center;
-        border-bottom: 1px solid #d9a253; }
-        .about .content .plan-top-left, .about .content .plan-top-right {
-          border-right: 1px solid #d9a253;
-          height: 100%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          color: #d9a253; }
-          .about .content .plan-top-left strong, .about .content .plan-top-right strong {
-            font-family: "Inter", sans-serif;
-            font-weight: 700;
+        flex-direction: column;
+        color: #d9a253; }
+        .about .content .plan-top-left strong, .about .content .plan-top-right strong {
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 2.4rem;
+          line-height: 143.9%; }
+        .about .content .plan-top-left span, .about .content .plan-top-right span {
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 1.6rem;
+          line-height: 143.9%; }
+      .about .content .plan-top-right {
+        border-right: none;
+        background-color: #d9a253;
+        color: #fff; }
+        .about .content .plan-top-right strong {
+          font-family: "Inter", sans-serif;
+          font-weight: 700;
+          font-size: 4.8rem;
+          line-height: 143.9%;
+          position: relative; }
+          .about .content .plan-top-right strong span {
+            position: absolute;
             font-size: 2.4rem;
-            line-height: 143.9%; }
-          .about .content .plan-top-left span, .about .content .plan-top-right span {
-            font-family: "Inter", sans-serif;
-            font-weight: 700;
-            font-size: 1.6rem;
-            line-height: 143.9%; }
-        .about .content .plan-top-right {
-          border-right: none;
-          background-color: #d9a253;
-          color: #fff; }
-          .about .content .plan-top-right strong {
-            font-family: "Inter", sans-serif;
-            font-weight: 700;
-            font-size: 4.8rem;
-            line-height: 143.9%;
-            position: relative; }
-            .about .content .plan-top-right strong span {
-              position: absolute;
-              font-size: 2.4rem;
-              top: 1rem;
-              right: -3rem; }
-          .about .content .plan-top-right span {
-            font-family: "Inter", sans-serif;
-            letter-spacing: 0.38em;
-            font-weight: 700;
-            font-size: 1.6rem;
-            display: block;
-            margin-top: -1rem; }
-      .about .content .plan-bottom {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 5.7rem;
-        font-family: "Inter", sans-serif;
-        font-weight: 600;
-        font-size: 2.4rem;
-        line-height: 143.9%; }
-    .about .content .partner {
-      height: 16.5rem;
-      display: inline-flex;
-      align-items: flex-start;
-      flex-direction: column;
-      gap: 1rem;
-      justify-content: center; }
-      .about .content .partner strong {
-        font-size: 1.6rem;
-        font-weight: 400; }
-      .about .content .partner .images {
-        display: flex;
-        gap: 1rem; }
-        .about .content .partner .images img {
-          height: 4.5rem; }
+            top: 1rem;
+            right: -3rem; }
+        .about .content .plan-top-right span {
+          font-family: "Inter", sans-serif;
+          letter-spacing: 0.38em;
+          font-weight: 700;
+          font-size: 1.6rem;
+          display: block;
+          margin-top: -1rem; }
+    .about .content .plan-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 5.7rem;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 2.4rem;
+      line-height: 143.9%; }
+  .about .content .partner {
+    height: 16.5rem;
+    display: inline-flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center; }
+    .about .content .partner strong {
+      font-size: 1.6rem;
+      font-weight: 400; }
+    .about .content .partner .images {
+      display: flex;
+      gap: 1rem; }
+      .about .content .partner .images img {
+        height: 4.5rem; }
   .about-btns {
     display: flex;
     justify-content: flex-start;
@@ -339,7 +340,6 @@ img {
     z-index: -1; }
   .space .content {
     color: #fff;
-    max-width: 70%;
     padding-bottom: 2rem; }
     .space .content .title {
       color: #fff; }
@@ -349,6 +349,8 @@ img {
     background-color: #fff; }
     .space .slider .item-wrp {
       padding: 0 1rem; }
+    .space .slider .item img {
+      min-height: 41.4rem; }
     .space .slider .item .info {
       padding: 3rem;
       display: none; }
@@ -371,3 +373,20 @@ img {
     border-color: #d9a253; }
   .space .btn-white {
     color: #fff; }
+
+.floor {
+  padding: 7rem 0;
+  padding-bottom: 40rem; }
+  .floor .image {
+    display: flex;
+    align-items: center;
+    gap: 2rem; }
+    .floor .image-left {
+      width: 100%; }
+    .floor .image-right {
+      width: 30%; }
+      .floor .image-right strong {
+        color: #d9a253;
+        padding: 1rem 0;
+        display: block;
+        font-size: 2.2rem; }
