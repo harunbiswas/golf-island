@@ -81,3 +81,12 @@ img {
   max-width: 132rem;
   margin: auto;
 }
+
+.title {
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 113.8%;
+  font-family: $playfair;
+  color: $color-secondary;
+  padding: 2rem 0;
+}
