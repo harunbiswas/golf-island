@@ -380,7 +380,7 @@
 
 .floor {
   padding: 7rem 0;
-  padding-bottom: 40rem;
+  padding-bottom: 35rem;
 
   .image {
     display: flex;
@@ -399,6 +399,279 @@
         display: block;
         font-size: 2.2rem;
       }
+    }
+  }
+}
+
+.club {
+  padding-bottom: 6rem;
+  background-image: url(./assets/images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  position: relative;
+  z-index: 1;
+  color: $color-white;
+
+  .title {
+    color: $color-white;
+  }
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $color-secondary;
+    opacity: 0.9;
+    z-index: -1;
+  }
+  .image {
+    & > img.img {
+      margin-top: -30rem;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .content {
+    margin: 3rem 0;
+  }
+
+  // item desing
+  .item {
+    &-wrp {
+      padding: 0 1rem;
+    }
+
+    border-radius: 1rem;
+    overflow: hidden;
+
+    .info {
+      background-color: $color-white;
+      color: $color-black;
+      padding: 3rem;
+
+      h4 {
+        padding: 1rem 0;
+        font-size: $font-md;
+      }
+
+      .btn-white {
+        color: $color-black;
+        text-align: left;
+        display: block;
+        padding-top: 3rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .slider {
+    .slick-next,
+    .slick-prev {
+      top: -4rem;
+      left: unset;
+      z-index: 99;
+      right: 1rem;
+    }
+
+    .slick-prev {
+      left: unset;
+      right: 8.3rem;
+    }
+  }
+}
+
+.amenitie {
+  padding: 4rem 0;
+  background-color: rgba($color: $color-theme, $alpha: 0.05);
+
+  .slider {
+    margin-top: 4rem;
+
+    .slick-next,
+    .slick-prev {
+      top: -4rem;
+      left: unset;
+      z-index: 99;
+      right: 1rem;
+    }
+
+    .slick-prev {
+      left: unset;
+      right: 8.3rem;
+    }
+
+    // item
+
+    .item {
+      &-wrp {
+        padding: 1rem;
+      }
+
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .box {
+        border: 1px solid $color-theme;
+        height: 100%;
+        border-radius: 1rem;
+        padding: 3rem;
+
+        .icon {
+          svg {
+            font-size: 2.8rem;
+          }
+          padding-bottom: 2rem;
+        }
+        span {
+          font-size: $font-xs;
+          text-transform: uppercase;
+          font-weight: 500;
+          line-height: 200%;
+        }
+      }
+    }
+  }
+}
+
+.view {
+  background-image: url(/assets/images/building.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 6rem;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      to left,
+      transparent 40%,
+      $color-secondary 100%
+    );
+    z-index: -1;
+  }
+
+  .container {
+    min-height: 70.8rem;
+    display: flex;
+    align-items: flex-end;
+    color: $color-white;
+
+    .title {
+      color: $color-white;
+    }
+  }
+}
+
+.state {
+  padding: 6rem;
+  text-align: center;
+
+  .info {
+    &-wrp {
+      display: flex;
+      gap: 6.4rem;
+      margin-top: 4rem;
+      position: relative;
+
+      .art {
+        position: absolute;
+        left: 50%;
+        top: 1rem;
+        transform: translateX(-50%);
+        font-size: $font-sm;
+        width: 4.8rem;
+        height: 4.8rem;
+        border: 1px solid $color-black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        z-index: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: -50px;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 5rem;
+          background-color: $color-black;
+          z-index: -1;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 47px;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 5rem;
+          background-color: $color-black;
+          z-index: -1;
+        }
+      }
+    }
+
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    img {
+      width: auto;
+      height: 6rem;
+    }
+    .image {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    p {
+      text-align: justify;
+    }
+  }
+  .info-2 {
+    .image {
+      justify-content: flex-start;
+    }
+  }
+
+  &-image {
+    min-height: 60rem;
+    background-image: url(assets/images/vegas-mall.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5rem;
+    border-radius: 2rem;
+    padding: 4rem;
+    text-align: left;
+    color: $color-white;
+
+    strong {
+      font-family: $playfair;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 90.8%;
+      padding: 1rem 0;
     }
   }
 }

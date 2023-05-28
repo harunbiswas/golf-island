@@ -8,7 +8,8 @@ html {
   font-size: 10px; }
 
 body {
-  font-size: unset; }
+  font-size: unset;
+  font-family: "Inter", sans-serif; }
 
 p,
 span,
@@ -376,7 +377,7 @@ img {
 
 .floor {
   padding: 7rem 0;
-  padding-bottom: 40rem; }
+  padding-bottom: 35rem; }
   .floor .image {
     display: flex;
     align-items: center;
@@ -390,3 +391,194 @@ img {
         padding: 1rem 0;
         display: block;
         font-size: 2.2rem; }
+
+.club {
+  padding-bottom: 6rem;
+  background-image: url(./assets/images/bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: repeat;
+  position: relative;
+  z-index: 1;
+  color: #fff; }
+  .club .title {
+    color: #fff; }
+  .club::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #012e29;
+    opacity: 0.9;
+    z-index: -1; }
+  .club .image > img.img {
+    margin-top: -30rem;
+    border-radius: 1.5rem; }
+  .club .content {
+    margin: 3rem 0; }
+  .club .item {
+    border-radius: 1rem;
+    overflow: hidden; }
+    .club .item-wrp {
+      padding: 0 1rem; }
+    .club .item .info {
+      background-color: #fff;
+      color: #000;
+      padding: 3rem; }
+      .club .item .info h4 {
+        padding: 1rem 0;
+        font-size: 2.4rem; }
+      .club .item .info .btn-white {
+        color: #000;
+        text-align: left;
+        display: block;
+        padding-top: 3rem;
+        text-transform: uppercase; }
+  .club .slider .slick-next,
+  .club .slider .slick-prev {
+    top: -4rem;
+    left: unset;
+    z-index: 99;
+    right: 1rem; }
+  .club .slider .slick-prev {
+    left: unset;
+    right: 8.3rem; }
+
+.amenitie {
+  padding: 4rem 0;
+  background-color: rgba(217, 162, 83, 0.05); }
+  .amenitie .slider {
+    margin-top: 4rem; }
+    .amenitie .slider .slick-next,
+    .amenitie .slider .slick-prev {
+      top: -4rem;
+      left: unset;
+      z-index: 99;
+      right: 1rem; }
+    .amenitie .slider .slick-prev {
+      left: unset;
+      right: 8.3rem; }
+    .amenitie .slider .item {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem; }
+      .amenitie .slider .item-wrp {
+        padding: 1rem; }
+      .amenitie .slider .item .box {
+        border: 1px solid #d9a253;
+        height: 100%;
+        border-radius: 1rem;
+        padding: 3rem; }
+        .amenitie .slider .item .box .icon {
+          padding-bottom: 2rem; }
+          .amenitie .slider .item .box .icon svg {
+            font-size: 2.8rem; }
+        .amenitie .slider .item .box span {
+          font-size: 1.4rem;
+          text-transform: uppercase;
+          font-weight: 500;
+          line-height: 200%; }
+
+.view {
+  background-image: url(/assets/images/building.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 6rem; }
+  .view::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left, transparent 40%, #012e29 100%);
+    z-index: -1; }
+  .view .container {
+    min-height: 70.8rem;
+    display: flex;
+    align-items: flex-end;
+    color: #fff; }
+    .view .container .title {
+      color: #fff; }
+
+.state {
+  padding: 6rem;
+  text-align: center; }
+  .state .info {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: flex-end; }
+    .state .info-wrp {
+      display: flex;
+      gap: 6.4rem;
+      margin-top: 4rem;
+      position: relative; }
+      .state .info-wrp .art {
+        position: absolute;
+        left: 50%;
+        top: 1rem;
+        transform: translateX(-50%);
+        font-size: 1.6rem;
+        width: 4.8rem;
+        height: 4.8rem;
+        border: 1px solid #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 1; }
+        .state .info-wrp .art::before {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: -50px;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 5rem;
+          background-color: #000;
+          z-index: -1; }
+        .state .info-wrp .art::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          top: 47px;
+          transform: translateX(-50%);
+          width: 1px;
+          height: 5rem;
+          background-color: #000;
+          z-index: -1; }
+    .state .info img {
+      width: auto;
+      height: 6rem; }
+    .state .info .image {
+      display: flex;
+      justify-content: flex-end; }
+    .state .info p {
+      text-align: justify; }
+  .state .info-2 .image {
+    justify-content: flex-start; }
+  .state-image {
+    min-height: 60rem;
+    background-image: url(assets/images/vegas-mall.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5rem;
+    border-radius: 2rem;
+    padding: 4rem;
+    text-align: left;
+    color: #fff; }
+    .state-image strong {
+      font-family: "Playfair Display", serif;
+      font-weight: 500; }
+    .state-image h1 {
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 90.8%;
+      padding: 1rem 0; }
