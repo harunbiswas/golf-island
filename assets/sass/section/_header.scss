@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999999999999999;
+  padding: 2rem 0;
+  transition: 0.4s;
+
+  .container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .brand {
+    height: 8rem;
+  }
+
+  .nav {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    .close {
+      display: none;
+    }
+
+    @media screen and (max-width: $md) {
+      position: fixed;
+      left: -500px;
+      top: 0;
+      background-color: rgba($color: #000000, $alpha: 0.9);
+      height: 100%;
+      width: 40rem;
+      flex-direction: column;
+      transition: 0.5s;
+
+      &.show {
+        left: 0;
+      }
+
+      .close {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        left: 40rem;
+        background: rgba($color: #000000, $alpha: 0.7);
+        border: 1px solid $color-white;
+        color: $color-white;
+        width: 3rem;
+        height: 3rem;
+        border-radius: 3px;
+        font-size: 2.4rem;
+      }
+    }
+
+    .link {
+      text-decoration: none;
+      color: $color-white;
+      font-size: $font-sm;
+      text-transform: uppercase;
+      transition: 0.4s;
+
+      &:hover,
+      &.active {
+        color: $color-theme;
+      }
+    }
+  }
+
+  &-btn-wrp {
+    .btn {
+      background-color: transparent;
+      border-color: $color-theme;
+      color: $color-theme;
+    }
+
+    @media screen and (max-width: $md) {
+      display: none;
+    }
+  }
+
+  &.scroll {
+    background-color: rgba($color: $color-white, $alpha: 0.9);
+
+    .link {
+      color: $color-black;
+    }
+
+    @media screen and (max-width: $md) {
+      background-color: transparent;
+
+      .link {
+        color: $color-white;
+      }
+    }
+  }
+
+  .toggle {
+    display: none;
+
+    @media screen and (max-width: $md) {
+      display: block;
+
+      .btn {
+        width: auto;
+        height: auto;
+        background: transparent;
+        border: none;
+        font-size: 3.4rem;
+      }
+    }
+  }
+}

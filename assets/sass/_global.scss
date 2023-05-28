@@ -81,6 +81,13 @@ img {
 .container {
   max-width: 132rem;
   margin: auto;
+
+  @media screen and (max-width: $xl) {
+    max-width: 100rem;
+  }
+  @media screen and (max-width: $lg) {
+    padding: 0 1rem;
+  }
 }
 
 .title {
@@ -90,6 +97,10 @@ img {
   font-family: $playfair;
   color: $color-secondary;
   padding: 2rem 0;
+
+  @media screen and (max-width: $sm) {
+    font-size: 4.8rem;
+  }
 }
 
 .about-btns {
@@ -98,6 +109,10 @@ img {
 
 .content {
   max-width: 70%;
+
+  @media screen and (max-width: $md) {
+    max-width: 100%;
+  }
 }
 
 // slick btn

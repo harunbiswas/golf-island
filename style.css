@@ -68,6 +68,12 @@ img {
 .container {
   max-width: 132rem;
   margin: auto; }
+  @media screen and (max-width: 1200px) {
+    .container {
+      max-width: 100rem; } }
+  @media screen and (max-width: 992px) {
+    .container {
+      padding: 0 1rem; } }
 
 .title {
   font-weight: 500;
@@ -76,12 +82,18 @@ img {
   font-family: "Playfair Display", serif;
   color: #012e29;
   padding: 2rem 0; }
+  @media screen and (max-width: 576px) {
+    .title {
+      font-size: 4.8rem; } }
 
 .about-btns {
   margin-top: 3rem; }
 
 .content {
   max-width: 70%; }
+  @media screen and (max-width: 768px) {
+    .content {
+      max-width: 100%; } }
 
 .slick-next,
 .slick-prev {
@@ -121,6 +133,90 @@ img {
 .slick-next::before {
   transform-origin: right; }
 
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999999999999999;
+  padding: 2rem 0;
+  transition: 0.4s; }
+  .header .container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between; }
+  .header .brand {
+    height: 8rem; }
+  .header .nav {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center; }
+    .header .nav .close {
+      display: none; }
+    @media screen and (max-width: 768px) {
+      .header .nav {
+        position: fixed;
+        left: -500px;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        height: 100%;
+        width: 40rem;
+        flex-direction: column;
+        transition: 0.5s; }
+        .header .nav.show {
+          left: 0; }
+        .header .nav .close {
+          display: block;
+          position: absolute;
+          top: 2rem;
+          left: 40rem;
+          background: rgba(0, 0, 0, 0.7);
+          border: 1px solid #fff;
+          color: #fff;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 3px;
+          font-size: 2.4rem; } }
+    .header .nav .link {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      transition: 0.4s; }
+      .header .nav .link:hover, .header .nav .link.active {
+        color: #d9a253; }
+  .header-btn-wrp .btn {
+    background-color: transparent;
+    border-color: #d9a253;
+    color: #d9a253; }
+  @media screen and (max-width: 768px) {
+    .header-btn-wrp {
+      display: none; } }
+  .header.scroll {
+    background-color: rgba(255, 255, 255, 0.9); }
+    .header.scroll .link {
+      color: #000; }
+    @media screen and (max-width: 768px) {
+      .header.scroll {
+        background-color: transparent; }
+        .header.scroll .link {
+          color: #fff; } }
+  .header .toggle {
+    display: none; }
+    @media screen and (max-width: 768px) {
+      .header .toggle {
+        display: block; }
+        .header .toggle .btn {
+          width: auto;
+          height: auto;
+          background: transparent;
+          border: none;
+          font-size: 3.4rem; } }
+
 .footer {
   background-image: url("/assets/images/bg.jpg");
   background-size: cover;
@@ -156,6 +252,9 @@ img {
       display: flex;
       gap: 6rem;
       padding-bottom: 6rem; }
+      @media screen and (max-width: 576px) {
+        .footer-form .form-group {
+          flex-direction: column; } }
   .footer-bottom strong {
     text-transform: uppercase;
     padding-bottom: 10rem;
@@ -213,6 +312,11 @@ option {
       font-size: 7.2rem;
       font-weight: 400;
       line-height: 8.1rem; }
+      @media screen and (max-width: 576px) {
+        .banar .content .title-lg,
+        .banar .content .title-lg-1 {
+          font-size: 2.6rem;
+          line-height: 3.4rem; } }
     .banar .content .title-lg-1 {
       color: #d9a253; }
     .banar .content p {
@@ -224,6 +328,9 @@ option {
     align-items: center;
     justify-content: center;
     margin-top: 2rem; }
+    @media screen and (max-width: 576px) {
+      .banar-btns {
+        flex-direction: column; } }
 
 .about {
   padding-bottom: 5rem; }
@@ -232,6 +339,10 @@ option {
     min-height: 60.1rem;
     margin-top: -30rem;
     z-index: 2; }
+    @media screen and (max-width: 576px) {
+      .about .img {
+        margin-top: -12rem;
+        min-height: 20rem; } }
     .about .img > img {
       border-radius: 2rem;
       max-height: 60.1rem; }
@@ -241,10 +352,18 @@ option {
     width: 50rem;
     height: 16.5rem;
     overflow: hidden; }
+    @media screen and (max-width: 576px) {
+      .about .content .plan {
+        width: 100%; } }
     .about .content .plan-wrp {
       display: flex;
       gap: 3.7rem;
       margin: 3rem 0; }
+      @media screen and (max-width: 768px) {
+        .about .content .plan-wrp {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; } }
     .about .content .plan-top {
       display: flex;
       height: 10.8rem;
@@ -308,6 +427,9 @@ option {
     flex-direction: column;
     gap: 1rem;
     justify-content: center; }
+    @media screen and (max-width: 768px) {
+      .about .content .partner {
+        height: auto; } }
     .about .content .partner strong {
       font-size: 1.6rem;
       font-weight: 400; }
@@ -321,6 +443,12 @@ option {
     justify-content: flex-start;
     align-items: center;
     gap: 2rem; }
+    @media screen and (max-width: 768px) {
+      .about-btns {
+        justify-content: center; } }
+    @media screen and (max-width: 576px) {
+      .about-btns {
+        flex-direction: column; } }
     .about-btns .btn-white {
       color: #000; }
 
@@ -358,9 +486,15 @@ option {
       border-top: 2rem solid #012e29;
       border-left: 2rem solid transparent;
       border-right: 2rem solid transparent; }
+      @media screen and (max-width: 768px) {
+        .service .content > .container .angle {
+          right: 4rem; } }
     .service .content > .container p {
       max-width: 70%;
       padding: 4rem; }
+  @media screen and (max-width: 576px) {
+    .service .about-btns {
+      margin-top: 11rem; } }
   .service .slider .item {
     border: 1px solid #d9a253;
     border-radius: 1.2rem;
@@ -407,6 +541,9 @@ option {
     padding-bottom: 2rem; }
     .space .content .title {
       color: #fff; }
+  @media screen and (max-width: 576px) {
+    .space .about-btns {
+      margin-top: 11rem; } }
   .space .slider .item {
     border-radius: 1rem;
     overflow: hidden;
@@ -428,8 +565,18 @@ option {
     bottom: -1rem;
     left: 51%;
     z-index: 99; }
+    @media screen and (max-width: 576px) {
+      .space .slider .slick-next,
+      .space .slider .slick-prev {
+        bottom: -12rem; } }
   .space .slider .slick-next {
     left: 58%; }
+    @media screen and (max-width: 768px) {
+      .space .slider .slick-next {
+        left: 61%; } }
+    @media screen and (max-width: 576px) {
+      .space .slider .slick-next {
+        left: 70%; } }
   .space .slider .slick-current .info {
     display: block; }
   .space .btn {
@@ -441,14 +588,24 @@ option {
 .floor {
   padding: 7rem 0;
   padding-bottom: 35rem; }
+  @media screen and (max-width: 576px) {
+    .floor {
+      padding-bottom: 15rem; } }
   .floor .image {
     display: flex;
     align-items: center;
     gap: 2rem; }
+    @media screen and (max-width: 576px) {
+      .floor .image {
+        flex-direction: column; } }
     .floor .image-left {
       width: 100%; }
     .floor .image-right {
       width: 30%; }
+      @media screen and (max-width: 576px) {
+        .floor .image-right {
+          width: 100%;
+          text-align: center; } }
       .floor .image-right strong {
         color: #d9a253;
         padding: 1rem 0;
@@ -479,6 +636,9 @@ option {
   .club .image > img.img {
     margin-top: -30rem;
     border-radius: 1.5rem; }
+    @media screen and (max-width: 576px) {
+      .club .image > img.img {
+        margin-top: -10rem; } }
   .club .content {
     margin: 3rem 0; }
   .club .item {
@@ -499,6 +659,9 @@ option {
         display: block;
         padding-top: 3rem;
         text-transform: uppercase; }
+  @media screen and (max-width: 768px) {
+    .club .slider {
+      margin-top: 10rem; } }
   .club .slider .slick-next,
   .club .slider .slick-prev {
     top: -4rem;
@@ -514,6 +677,9 @@ option {
   background-color: rgba(217, 162, 83, 0.05); }
   .amenitie .slider {
     margin-top: 4rem; }
+    @media screen and (max-width: 768px) {
+      .amenitie .slider {
+        margin-top: 10rem; } }
     .amenitie .slider .slick-next,
     .amenitie .slider .slick-prev {
       top: -4rem;
@@ -572,6 +738,11 @@ option {
 .state {
   padding: 6rem;
   text-align: center; }
+  @media screen and (max-width: 576px) {
+    .state .content p {
+      display: none; }
+    .state .content h1 {
+      font-size: 2.8rem; } }
   .state .info {
     display: flex;
     gap: 2rem;
@@ -582,6 +753,9 @@ option {
       gap: 6.4rem;
       margin-top: 4rem;
       position: relative; }
+      @media screen and (max-width: 576px) {
+        .state .info-wrp {
+          flex-direction: column; } }
       .state .info-wrp .art {
         position: absolute;
         left: 50%;
@@ -616,12 +790,18 @@ option {
           height: 5rem;
           background-color: #000;
           z-index: -1; }
+        @media screen and (max-width: 576px) {
+          .state .info-wrp .art {
+            display: none; } }
     .state .info img {
       width: auto;
       height: 6rem; }
     .state .info .image {
       display: flex;
       justify-content: flex-end; }
+      @media screen and (max-width: 576px) {
+        .state .info .image {
+          justify-content: flex-start; } }
     .state .info p {
       text-align: justify; }
   .state .info-2 .image {
@@ -656,6 +836,9 @@ option {
       display: flex;
       gap: 4rem;
       list-style: none; }
+      @media screen and (max-width: 576px) {
+        .state-report-wrp {
+          flex-direction: column; } }
       .state-report-wrp .item {
         width: 100%;
         display: flex;
@@ -666,6 +849,10 @@ option {
         border-right: 1px solid #d6d6d6;
         height: 7rem;
         padding-right: 4rem; }
+        @media screen and (max-width: 576px) {
+          .state-report-wrp .item {
+            border: none;
+            height: 100%; } }
         .state-report-wrp .item:last-child {
           border-right: none;
           padding-right: 0; }
@@ -678,6 +865,13 @@ option {
     display: flex;
     gap: 3rem;
     margin: 4rem 0; }
+    @media screen and (max-width: 768px) {
+      .state-project {
+        margin-top: 10rem;
+        flex-direction: column; } }
+    @media screen and (max-width: 576px) {
+      .state-project {
+        margin-top: 0rem; } }
     .state-project .item {
       border-radius: 1rem;
       background-color: #f7f1ec;
@@ -691,10 +885,22 @@ option {
   margin-bottom: 6rem; }
   .gallery .slider {
     margin-top: 4rem; }
+    @media screen and (max-width: 768px) {
+      .gallery .slider {
+        margin-top: 10rem; } }
     .gallery .slider .item {
       height: 40rem; }
       .gallery .slider .item-wrp {
         padding: 1rem; }
+    .gallery .slider .slick-next,
+    .gallery .slider .slick-prev {
+      top: -4rem;
+      left: unset;
+      z-index: 99;
+      right: 1rem; }
+    .gallery .slider .slick-prev {
+      left: unset;
+      right: 8.3rem; }
     .gallery .slider .slick-track {
       display: flex;
       align-items: flex-end; }

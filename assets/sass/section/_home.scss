@@ -31,6 +31,11 @@
       font-size: 7.2rem;
       font-weight: 400;
       line-height: 8.1rem;
+
+      @media screen and (max-width: $sm) {
+        font-size: 2.6rem;
+        line-height: 3.4rem;
+      }
     }
     .title-lg-1 {
       color: $color-theme;
@@ -47,6 +52,10 @@
     align-items: center;
     justify-content: center;
     margin-top: 2rem;
+
+    @media screen and (max-width: $sm) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -57,6 +66,11 @@
     min-height: 60.1rem;
     margin-top: -30rem;
     z-index: 2;
+
+    @media screen and (max-width: $sm) {
+      margin-top: -12rem;
+      min-height: 20rem;
+    }
 
     & > img {
       border-radius: 2rem;
@@ -72,10 +86,20 @@
       height: 16.5rem;
       overflow: hidden;
 
+      @media screen and (max-width: $sm) {
+        width: 100%;
+      }
+
       &-wrp {
         display: flex;
         gap: 3.7rem;
         margin: 3rem 0;
+
+        @media screen and (max-width: $md) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
       }
 
       &-top {
@@ -164,6 +188,10 @@
       gap: 1rem;
       justify-content: center;
 
+      @media screen and (max-width: $md) {
+        height: auto;
+      }
+
       strong {
         font-size: $font-sm;
         font-weight: 400;
@@ -185,6 +213,14 @@
     justify-content: flex-start;
     align-items: center;
     gap: 2rem;
+
+    @media screen and (max-width: $md) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: $sm) {
+      flex-direction: column;
+    }
 
     .btn-white {
       color: $color-black;
@@ -238,15 +274,24 @@
         position: absolute;
         right: 0;
         top: 0;
-
         border-top: 2rem solid $color-secondary;
         border-left: 2rem solid transparent;
         border-right: 2rem solid transparent;
+
+        @media screen and (max-width: $md) {
+          right: 4rem;
+        }
       }
       p {
         max-width: 70%;
         padding: 4rem;
       }
+    }
+  }
+
+  .about-btns {
+    @media screen and (max-width: $sm) {
+      margin-top: 11rem;
     }
   }
 
@@ -322,6 +367,12 @@
     }
   }
 
+  .about-btns {
+    @media screen and (max-width: $sm) {
+      margin-top: 11rem;
+    }
+  }
+
   // slider
   .slider {
     .item {
@@ -355,10 +406,22 @@
       bottom: -1rem;
       left: 51%;
       z-index: 99;
+
+      @media screen and (max-width: $sm) {
+        bottom: -12rem;
+      }
     }
 
     .slick-next {
       left: 58%;
+
+      @media screen and (max-width: $md) {
+        left: 61%;
+      }
+
+      @media screen and (max-width: $sm) {
+        left: 70%;
+      }
     }
 
     .slick-current {
@@ -382,10 +445,18 @@
   padding: 7rem 0;
   padding-bottom: 35rem;
 
+  @media screen and (max-width: $sm) {
+    padding-bottom: 15rem;
+  }
+
   .image {
     display: flex;
     align-items: center;
     gap: 2rem;
+
+    @media screen and (max-width: $sm) {
+      flex-direction: column;
+    }
 
     &-left {
       width: 100%;
@@ -393,6 +464,11 @@
 
     &-right {
       width: 30%;
+
+      @media screen and (max-width: $sm) {
+        width: 100%;
+        text-align: center;
+      }
       strong {
         color: $color-theme;
         padding: 1rem 0;
@@ -432,6 +508,10 @@
     & > img.img {
       margin-top: -30rem;
       border-radius: 1.5rem;
+
+      @media screen and (max-width: $sm) {
+        margin-top: -10rem;
+      }
     }
   }
 
@@ -469,6 +549,9 @@
   }
 
   .slider {
+    @media screen and (max-width: $md) {
+      margin-top: 10rem;
+    }
     .slick-next,
     .slick-prev {
       top: -4rem;
@@ -490,6 +573,10 @@
 
   .slider {
     margin-top: 4rem;
+
+    @media screen and (max-width: $md) {
+      margin-top: 10rem;
+    }
 
     .slick-next,
     .slick-prev {
@@ -578,12 +665,28 @@
   padding: 6rem;
   text-align: center;
 
+  .content {
+    @media screen and (max-width: $sm) {
+      p {
+        display: none;
+      }
+
+      h1 {
+        font-size: 2.8rem;
+      }
+    }
+  }
+
   .info {
     &-wrp {
       display: flex;
       gap: 6.4rem;
       margin-top: 4rem;
       position: relative;
+
+      @media screen and (max-width: $sm) {
+        flex-direction: column;
+      }
 
       .art {
         position: absolute;
@@ -623,6 +726,10 @@
           background-color: $color-black;
           z-index: -1;
         }
+
+        @media screen and (max-width: $sm) {
+          display: none;
+        }
       }
     }
 
@@ -638,6 +745,10 @@
     .image {
       display: flex;
       justify-content: flex-end;
+
+      @media screen and (max-width: $sm) {
+        justify-content: flex-start;
+      }
     }
 
     p {
@@ -690,6 +801,10 @@
       gap: 4rem;
       list-style: none;
 
+      @media screen and (max-width: $sm) {
+        flex-direction: column;
+      }
+
       .item {
         width: 100%;
         display: flex;
@@ -700,6 +815,11 @@
         border-right: 1px solid #d6d6d6;
         height: 7rem;
         padding-right: 4rem;
+
+        @media screen and (max-width: $sm) {
+          border: none;
+          height: 100%;
+        }
 
         &:last-child {
           border-right: none;
@@ -723,6 +843,16 @@
     gap: 3rem;
     margin: 4rem 0;
 
+    @media screen and (max-width: $md) {
+      margin-top: 10rem;
+
+      flex-direction: column;
+    }
+
+    @media screen and (max-width: $sm) {
+      margin-top: 0rem;
+    }
+
     .item {
       border-radius: 1rem;
       background-color: #f7f1ec;
@@ -744,12 +874,29 @@
   .slider {
     margin-top: 4rem;
 
+    @media screen and (max-width: $md) {
+      margin-top: 10rem;
+    }
+
     .item {
       &-wrp {
         padding: 1rem;
       }
 
       height: 40rem;
+    }
+
+    .slick-next,
+    .slick-prev {
+      top: -4rem;
+      left: unset;
+      z-index: 99;
+      right: 1rem;
+    }
+
+    .slick-prev {
+      left: unset;
+      right: 8.3rem;
     }
     .slick-track {
       display: flex;
