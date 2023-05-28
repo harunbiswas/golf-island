@@ -27,6 +27,21 @@ close.addEventListener("click", () => {
   }
 });
 
+// popup
+const popupbtn = document.querySelector("#popup");
+const popup = document.querySelector(".popup");
+const popupclg = document.querySelector(".popup-close");
+
+popupbtn.addEventListener("click", () => {
+  popup.classList.add("show");
+});
+
+popupclg.addEventListener("click", () => {
+  popup.classList.remove("show");
+});
+
+// slider
+
 $(".slick-slider").slick({
   dots: false,
   infinite: false,

@@ -980,18 +980,40 @@
 // .popup desing
 .popup {
   width: 800px;
-  margin: 10rem auto;
   background-image: url("assets/images/Dining.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 5rem;
   border-radius: 2rem;
-  position: relative;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transition: 0.5s;
+  transform-origin: center;
+  transform: translate(-50%, -50%) scale(0);
   display: flex;
   gap: 2rem;
-  z-index: 1;
+  z-index: 999999999999999999;
   overflow: hidden;
+
+  &.show {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+
+    button {
+      background-color: transparent;
+      font-size: 2.4rem;
+      color: $color-white;
+      border: none;
+    }
+  }
 
   @media screen and (max-width: $md) {
     width: 100%;
