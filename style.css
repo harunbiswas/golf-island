@@ -939,3 +939,50 @@ option {
       align-items: flex-end; }
     .gallery .slider .slick-center .item {
       height: 45rem; }
+
+.thank {
+  height: 100vh;
+  background-image: url("assets/images/thankyou/BG.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1; }
+  .thank::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("assets/images/thankyou/pattern.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; }
+  .thank .text h1 {
+    font-size: 10rem;
+    font-weight: 400; }
+  .thank .text strong {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px; }
+  .thank .text .btn {
+    margin: auto;
+    margin-top: 2rem;
+    width: 30rem; }
+  .thank .text .social {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    align-items: center;
+    justify-content: center; }
+    .thank .text .social a {
+      color: #fff;
+      font-size: 2.8rem; }

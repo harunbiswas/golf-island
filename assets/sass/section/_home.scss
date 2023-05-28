@@ -909,3 +909,65 @@
     }
   }
 }
+
+//thank you page
+.thank {
+  height: 100vh;
+  background-image: url("assets/images/thankyou/BG.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: $color-white;
+  position: relative;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("assets/images/thankyou/pattern.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+
+  .text {
+    h1 {
+      font-size: 10rem;
+      font-weight: 400;
+    }
+    strong {
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 29px;
+    }
+
+    .btn {
+      margin: auto;
+      margin-top: 2rem;
+      width: 30rem;
+    }
+
+    .social {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin-top: 3rem;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        color: $color-white;
+        font-size: 2.8rem;
+      }
+    }
+  }
+}
