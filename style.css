@@ -283,6 +283,39 @@ textarea {
 option {
   color: #000; }
 
+.mobile-bottom {
+  display: none; }
+  @media screen and (max-width: 576px) {
+    .mobile-bottom {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #012e29;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      z-index: 99999; }
+      .mobile-bottom::after {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        background-color: #d9a253;
+        left: 50%;
+        top: 0;
+        z-index: 999999; }
+      .mobile-bottom span {
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        display: block; }
+      .mobile-bottom a {
+        width: 100%; }
+        .mobile-bottom a svg {
+          font-size: 22px; } }
+
 .banar {
   text-align: center;
   min-height: 83.7rem;
