@@ -990,3 +990,56 @@ option {
     .thank .text .social a {
       color: #fff;
       font-size: 2.8rem; }
+
+.popup {
+  width: 800px;
+  margin: 10rem auto;
+  background-image: url("assets/images/Dining.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5rem;
+  border-radius: 2rem;
+  position: relative;
+  display: flex;
+  gap: 2rem;
+  z-index: 1;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .popup {
+      width: 100%; } }
+  @media screen and (max-width: 576px) {
+    .popup {
+      flex-direction: column; } }
+  .popup::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #012e29;
+    z-index: -1;
+    opacity: 0.95; }
+  .popup-left .brand {
+    height: 4.3rem;
+    width: 8rem;
+    margin-bottom: 10rem; }
+    @media screen and (max-width: 576px) {
+      .popup-left .brand {
+        margin: auto;
+        margin-bottom: 2rem; } }
+  .popup-left .text {
+    color: #fff; }
+    .popup-left .text h2 {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 113.8%;
+      padding-bottom: 2rem; }
+  .popup-form {
+    width: 100%; }
+    .popup-form form,
+    .popup-form .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem; }
