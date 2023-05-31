@@ -7,7 +7,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 
   @media screen and (max-width: $sm) {
     min-height: 70rem;
@@ -1077,7 +1077,10 @@
 
   position: relative;
   width: 800px;
+
   background-image: url("assets/images/Dining.jpg");
+  padding: 0;
+  margin: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1087,6 +1090,7 @@
   overflow: hidden;
   z-index: 1;
   display: flex;
+  border: 2px solid $color-secondary;
 
   &-close {
     position: absolute;
@@ -1111,19 +1115,17 @@
     text-align: center;
   }
 
-  &::after {
-    content: "";
-    width: 100%;
+  & .overlay {
+    width: 110%;
     height: 100%;
     position: absolute;
+    background-color: $color-secondary;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color-secondary;
     z-index: -1;
     opacity: 0.95;
-    border: 3px solid $color-secondary;
   }
 
   &-left {
