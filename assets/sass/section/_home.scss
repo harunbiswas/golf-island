@@ -454,6 +454,12 @@
     .slick-current {
       .info {
         display: block;
+
+        @media screen and (max-width: $sm) {
+          p {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -852,6 +858,10 @@
         border-right: 1px solid #d6d6d6;
         height: 7rem;
         padding-right: 4rem;
+
+        @media screen and (max-width: $sm) {
+          padding-right: 0;
+        }
 
         @media screen and (max-width: $sm) {
           border: none;

@@ -648,6 +648,9 @@ option {
         left: 70%; } }
   .space .slider .slick-current .info {
     display: block; }
+    @media screen and (max-width: 576px) {
+      .space .slider .slick-current .info p {
+        display: none; } }
   .space .btn {
     background-color: #d9a253;
     border-color: #d9a253; }
@@ -927,6 +930,9 @@ option {
         border-right: 1px solid #d6d6d6;
         height: 7rem;
         padding-right: 4rem; }
+        @media screen and (max-width: 576px) {
+          .state-report-wrp .item {
+            padding-right: 0; } }
         @media screen and (max-width: 576px) {
           .state-report-wrp .item {
             border: none;
