@@ -23,6 +23,11 @@
       width: 16rem;
     }
 
+    @media screen and (max-width: $sm) {
+      height: 7rem;
+      width: 15rem;
+    }
+
     img {
       object-fit: contain;
     }

@@ -154,6 +154,10 @@ img {
       .header .brand {
         height: 8rem;
         width: 16rem; } }
+    @media screen and (max-width: 576px) {
+      .header .brand {
+        height: 7rem;
+        width: 15rem; } }
     .header .brand img {
       object-fit: contain; }
   .header .nav {
@@ -535,7 +539,11 @@ option {
   padding-bottom: 6rem; }
   .service .image {
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    background-image: url("./assets/images/vegas-mall.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover; }
     .service .image::after {
       content: "";
       position: absolute;

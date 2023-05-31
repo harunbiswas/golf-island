@@ -251,6 +251,10 @@
   .image {
     position: relative;
     z-index: 1;
+    background-image: url("./assets/images/vegas-mall.jpg");
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
 
     &::after {
       content: "";
