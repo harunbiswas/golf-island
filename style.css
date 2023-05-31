@@ -90,7 +90,7 @@ img {
   margin-top: 3rem; }
 
 .content {
-  max-width: 70%; }
+  max-width: 66%; }
   @media screen and (max-width: 768px) {
     .content {
       max-width: 100%; } }
@@ -323,6 +323,8 @@ option {
       .mobile-bottom .container span {
         width: 100%;
         color: #fff; }
+      .mobile-bottom .container small {
+        color: #979797; }
       .mobile-bottom .container a {
         width: 100%; }
         .mobile-bottom .container a svg {
@@ -338,6 +340,9 @@ option {
   background-size: cover;
   position: relative;
   z-index: 1; }
+  @media screen and (max-width: 576px) {
+    .banar {
+      min-height: 70rem; } }
   .banar::after {
     content: "";
     width: 100%;
@@ -385,6 +390,9 @@ option {
   background-position: right bottom;
   margin-bottom: 2rem;
   margin-right: 2rem; }
+  @media screen and (max-width: 576px) {
+    .about {
+      background-image: none; } }
   .about .img {
     position: relative;
     min-height: 60.1rem;
@@ -528,9 +536,10 @@ option {
       bottom: 4rem;
       z-index: 1;
       color: #fff; }
-  .service .content > .container {
-    position: relative; }
-    .service .content > .container .angle {
+  .service .container > .content {
+    position: relative;
+    max-width: 100%; }
+    .service .container > .content .angle {
       position: absolute;
       right: 0;
       top: 0;
@@ -538,9 +547,9 @@ option {
       border-left: 2rem solid transparent;
       border-right: 2rem solid transparent; }
       @media screen and (max-width: 768px) {
-        .service .content > .container .angle {
+        .service .container > .content .angle {
           right: 4rem; } }
-    .service .content > .container p {
+    .service .container > .content p {
       max-width: 70%;
       padding: 4rem; }
   @media screen and (max-width: 576px) {
@@ -552,8 +561,8 @@ option {
     padding: 2.2rem; }
     .service .slider .item-wrp {
       padding: 0 1rem; }
-    .service .slider .item .icon svg {
-      font-size: 4.8rem; }
+    .service .slider .item .icon img {
+      width: 4.5rem; }
     .service .slider .item h4 {
       font-size: 1.6rem;
       font-family: "Inter", sans-serif;
@@ -645,6 +654,9 @@ option {
   background-position: right bottom;
   margin-bottom: 2rem;
   margin-right: 2rem; }
+  @media screen and (max-width: 768px) {
+    .floor {
+      background-image: none; } }
   @media screen and (max-width: 576px) {
     .floor {
       padding-bottom: 15rem; } }
@@ -731,7 +743,7 @@ option {
 
 .amenitie {
   padding: 4rem 0;
-  background-color: rgba(217, 162, 83, 0.05); }
+  background-color: #f7f1ec; }
   .amenitie .slider {
     margin-top: 4rem; }
     @media screen and (max-width: 768px) {
@@ -759,8 +771,8 @@ option {
         padding: 3rem; }
         .amenitie .slider .item .box .icon {
           padding-bottom: 2rem; }
-          .amenitie .slider .item .box .icon svg {
-            font-size: 2.8rem; }
+          .amenitie .slider .item .box .icon img {
+            width: 4rem; }
         .amenitie .slider .item .box span {
           font-size: 1.4rem;
           text-transform: uppercase;
@@ -933,6 +945,8 @@ option {
       border-radius: 1rem;
       background-color: #f7f1ec;
       overflow: hidden; }
+      .state-project .item-wrp {
+        padding: 0 1rem; }
       .state-project .item > .image {
         height: 34.2rem; }
       .state-project .item > .info {
@@ -1016,6 +1030,7 @@ option {
       font-size: 2.8rem; }
 
 .popup {
+  position: relative;
   width: 800px;
   background-image: url("assets/images/Dining.jpg");
   background-size: cover;
@@ -1023,18 +1038,25 @@ option {
   background-repeat: no-repeat;
   padding: 5rem;
   border-radius: 2rem;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transition: 0.5s;
-  transform-origin: center;
-  transform: translate(-50%, -50%) scale(0);
-  display: flex;
   gap: 2rem;
-  z-index: 999999999999999999;
-  overflow: hidden; }
-  .popup.show {
-    transform: translate(-50%, -50%) scale(1); }
+  overflow: hidden;
+  z-index: 1; }
+  .popup-wrp {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transition: 0.5s;
+    transform-origin: center;
+    transform: translate(-50%, -50%) scale(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999999999; }
+    .popup-wrp.show {
+      transform: translate(-50%, -50%) scale(1); }
   .popup-close {
     position: absolute;
     top: 2rem;
@@ -1058,9 +1080,12 @@ option {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     background-color: #012e29;
     z-index: -1;
-    opacity: 0.95; }
+    opacity: 0.95;
+    border: 3px solid #012e29; }
   .popup-left .brand {
     height: 4.3rem;
     width: 8rem;
