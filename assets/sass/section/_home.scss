@@ -36,9 +36,9 @@
       font-weight: 400;
       line-height: 8.1rem;
 
-      @media screen and (max-width: $sm) {
-        font-size: 2.6rem;
-        line-height: 3.4rem;
+      @media screen and (max-width: $md) {
+        font-size: 4.8rem;
+        line-height: 5.4rem;
       }
     }
     .title-lg-1 {
@@ -77,12 +77,12 @@
 
   .img {
     position: relative;
-    min-height: 60.1rem;
+
     margin-top: -30rem;
     z-index: 2;
 
     @media screen and (max-width: $sm) {
-      margin-top: -12rem;
+      margin-top: -7rem;
       min-height: 20rem;
     }
 
@@ -247,7 +247,6 @@
   .image {
     position: relative;
     z-index: 1;
-    min-height: 82.3rem;
 
     &::after {
       content: "";
@@ -270,10 +269,18 @@
       top: 0;
       left: 0;
     }
+    & > .container {
+      padding-top: 70rem;
+
+      @media screen and (max-width: $md) {
+        padding-top: 32.3rem;
+      }
+      @media screen and (max-width: $sm) {
+        padding-top: 22.3rem;
+      }
+    }
 
     h1 {
-      position: absolute;
-      bottom: 4rem;
       z-index: 1;
 
       color: $color-white;
@@ -299,7 +306,12 @@
       }
       p {
         max-width: 70%;
-        padding: 4rem;
+        padding: 4rem 0;
+
+        @media screen and (max-width: $sm) {
+          max-width: 100%;
+          text-align: justify;
+        }
       }
     }
   }

@@ -70,7 +70,8 @@ img {
   margin: auto; }
   @media screen and (max-width: 1200px) {
     .container {
-      max-width: 100rem; } }
+      max-width: 100rem;
+      padding: 0 3rem; } }
   @media screen and (max-width: 992px) {
     .container {
       padding: 0 3rem; } }
@@ -82,9 +83,9 @@ img {
   font-family: "Playfair Display", serif;
   color: #012e29;
   padding: 2rem 0; }
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 768px) {
     .title {
-      font-size: 4.8rem; } }
+      font-size: 4.7rem; } }
 
 .about-btns {
   margin-top: 3rem; }
@@ -362,11 +363,11 @@ option {
       font-size: 7.2rem;
       font-weight: 400;
       line-height: 8.1rem; }
-      @media screen and (max-width: 576px) {
+      @media screen and (max-width: 768px) {
         .banar .content .title-lg,
         .banar .content .title-lg-1 {
-          font-size: 2.6rem;
-          line-height: 3.4rem; } }
+          font-size: 4.8rem;
+          line-height: 5.4rem; } }
     .banar .content .title-lg-1 {
       color: #d9a253; }
     .banar .content p {
@@ -395,12 +396,11 @@ option {
       background-image: none; } }
   .about .img {
     position: relative;
-    min-height: 60.1rem;
     margin-top: -30rem;
     z-index: 2; }
     @media screen and (max-width: 576px) {
       .about .img {
-        margin-top: -12rem;
+        margin-top: -7rem;
         min-height: 20rem; } }
     .about .img > img {
       border-radius: 2rem;
@@ -515,8 +515,7 @@ option {
   padding-bottom: 6rem; }
   .service .image {
     position: relative;
-    z-index: 1;
-    min-height: 82.3rem; }
+    z-index: 1; }
     .service .image::after {
       content: "";
       position: absolute;
@@ -531,9 +530,15 @@ option {
       position: absolute;
       top: 0;
       left: 0; }
+    .service .image > .container {
+      padding-top: 70rem; }
+      @media screen and (max-width: 768px) {
+        .service .image > .container {
+          padding-top: 32.3rem; } }
+      @media screen and (max-width: 576px) {
+        .service .image > .container {
+          padding-top: 22.3rem; } }
     .service .image h1 {
-      position: absolute;
-      bottom: 4rem;
       z-index: 1;
       color: #fff; }
   .service .container > .content {
@@ -551,7 +556,11 @@ option {
           right: 4rem; } }
     .service .container > .content p {
       max-width: 70%;
-      padding: 4rem; }
+      padding: 4rem 0; }
+      @media screen and (max-width: 576px) {
+        .service .container > .content p {
+          max-width: 100%;
+          text-align: justify; } }
   @media screen and (max-width: 576px) {
     .service .about-btns {
       margin-top: 11rem; } }
