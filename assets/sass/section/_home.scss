@@ -61,6 +61,12 @@
 
 .about {
   padding-bottom: 5rem;
+  background-image: url("/assets/images/Frame.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right bottom;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
   .img {
     position: relative;
     min-height: 60.1rem;
@@ -444,6 +450,12 @@
 .floor {
   padding: 7rem 0;
   padding-bottom: 35rem;
+  background-image: url("/assets/images/Frame.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right bottom;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
 
   @media screen and (max-width: $sm) {
     padding-bottom: 15rem;
@@ -662,7 +674,7 @@
 }
 
 .state {
-  padding: 6rem;
+  padding: 6rem 0;
   text-align: center;
 
   .content {

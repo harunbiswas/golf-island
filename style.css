@@ -73,7 +73,7 @@ img {
       max-width: 100rem; } }
   @media screen and (max-width: 992px) {
     .container {
-      padding: 0 1rem; } }
+      padding: 0 3rem; } }
 
 .title {
   font-weight: 500;
@@ -134,21 +134,25 @@ img {
   transform-origin: right; }
 
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 9999999999999999;
   padding: 2rem 0;
-  transition: 0.4s; }
+  transition: 0.5s; }
   .header .container {
     display: flex;
     gap: 2rem;
     align-items: center;
     justify-content: space-between; }
   .header .brand {
-    height: 8rem;
-    width: 15rem; }
+    height: 10rem;
+    width: 19rem; }
+    @media screen and (max-width: 768px) {
+      .header .brand {
+        height: 8rem;
+        width: 16rem; } }
     .header .brand img {
       object-fit: contain; }
   .header .nav {
@@ -169,14 +173,18 @@ img {
         height: 100%;
         width: 40rem;
         flex-direction: column;
-        transition: 0.5s; }
+        justify-content: center;
+        align-items: flex-start;
+        transition: 0.5s;
+        z-index: 999999999;
+        padding: 4rem; }
         .header .nav.show {
           left: 0; }
         .header .nav .close {
           display: block;
           position: absolute;
           top: 2rem;
-          left: 40rem;
+          right: 2rem;
           background: rgba(0, 0, 0, 0.7);
           border: 1px solid #fff;
           color: #fff;
@@ -200,14 +208,15 @@ img {
     .header-btn-wrp {
       display: none; } }
   .header.scroll {
-    background-color: rgba(255, 255, 255, 0.9); }
+    background-color: #fff;
+    position: fixed; }
     .header.scroll .link {
       color: #000; }
     @media screen and (max-width: 768px) {
-      .header.scroll {
-        background-color: transparent; }
-        .header.scroll .link {
-          color: #fff; } }
+      .header.scroll .toggle svg {
+        color: #000; }
+      .header.scroll .link {
+        color: #fff; } }
   .header .toggle {
     display: none; }
     @media screen and (max-width: 768px) {
@@ -289,6 +298,9 @@ option {
   display: none; }
   @media screen and (max-width: 576px) {
     .mobile-bottom {
+      display: block; } }
+  @media screen and (max-width: 576px) {
+    .mobile-bottom .container {
       display: flex;
       position: fixed;
       bottom: 0;
@@ -299,7 +311,7 @@ option {
       justify-content: center;
       padding: 2rem;
       z-index: 99999; }
-      .mobile-bottom::after {
+      .mobile-bottom .container::after {
         content: "";
         width: 1px;
         height: 100%;
@@ -308,14 +320,12 @@ option {
         left: 50%;
         top: 0;
         z-index: 999999; }
-      .mobile-bottom span {
+      .mobile-bottom .container span {
         width: 100%;
-        color: #fff;
-        text-align: center;
-        display: block; }
-      .mobile-bottom a {
+        color: #fff; }
+      .mobile-bottom .container a {
         width: 100%; }
-        .mobile-bottom a svg {
+        .mobile-bottom .container a svg {
           font-size: 22px; } }
 
 .banar {
@@ -368,7 +378,13 @@ option {
         flex-direction: column; } }
 
 .about {
-  padding-bottom: 5rem; }
+  padding-bottom: 5rem;
+  background-image: url("/assets/images/Frame.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right bottom;
+  margin-bottom: 2rem;
+  margin-right: 2rem; }
   .about .img {
     position: relative;
     min-height: 60.1rem;
@@ -622,7 +638,13 @@ option {
 
 .floor {
   padding: 7rem 0;
-  padding-bottom: 35rem; }
+  padding-bottom: 35rem;
+  background-image: url("/assets/images/Frame.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: right bottom;
+  margin-bottom: 2rem;
+  margin-right: 2rem; }
   @media screen and (max-width: 576px) {
     .floor {
       padding-bottom: 15rem; } }
@@ -771,7 +793,7 @@ option {
       color: #fff; }
 
 .state {
-  padding: 6rem;
+  padding: 6rem 0;
   text-align: center; }
   @media screen and (max-width: 576px) {
     .state .content p {

@@ -1,11 +1,24 @@
 // header functionality
 const header = document.querySelector(".header");
+const barnd = document.querySelector(".brand > img");
 
+let previousScrollPosition = window.pageYOffset;
 document.addEventListener("scroll", () => {
-  if (window.scrollY > 200) {
-    header.classList.add("scroll");
-  } else {
+  const currentScrollPosition = window.pageYOffset;
+
+  if (
+    currentScrollPosition > previousScrollPosition ||
+    currentScrollPosition < 400
+  ) {
+    // Scrolling down
     header.classList.remove("scroll");
+    barnd.src = "./assets/images/Logo Gold.svg";
+    previousScrollPosition = currentScrollPosition;
+  } else if (currentScrollPosition < previousScrollPosition) {
+    // Scrolling up
+    header.classList.add("scroll");
+    barnd.src = "./assets/images/golf -sland-black.svg";
+    previousScrollPosition = currentScrollPosition;
   }
 });
 // toggle
@@ -28,12 +41,14 @@ close.addEventListener("click", () => {
 });
 
 // popup
-const popupbtn = document.querySelector("#popup");
+const popupbtn = document.querySelectorAll("#popup");
 const popup = document.querySelector(".popup");
 const popupclg = document.querySelector(".popup-close");
 
-popupbtn.addEventListener("click", () => {
-  popup.classList.add("show");
+popupbtn.forEach((item) => {
+  item.addEventListener("click", () => {
+    popup.classList.add("show");
+  });
 });
 
 popupclg.addEventListener("click", () => {

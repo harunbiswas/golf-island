@@ -1,11 +1,11 @@
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 9999999999999999;
   padding: 2rem 0;
-  transition: 0.4s;
+  transition: 0.5s;
 
   .container {
     display: flex;
@@ -15,8 +15,13 @@
   }
 
   .brand {
-    height: 8rem;
-    width: 15rem;
+    height: 10rem;
+    width: 19rem;
+
+    @media screen and (max-width: $md) {
+      height: 8rem;
+      width: 16rem;
+    }
 
     img {
       object-fit: contain;
@@ -43,7 +48,11 @@
       height: 100%;
       width: 40rem;
       flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
       transition: 0.5s;
+      z-index: 999999999;
+      padding: 4rem;
 
       &.show {
         left: 0;
@@ -53,7 +62,7 @@
         display: block;
         position: absolute;
         top: 2rem;
-        left: 40rem;
+        right: 2rem;
         background: rgba($color: #000000, $alpha: 0.7);
         border: 1px solid $color-white;
         color: $color-white;
@@ -91,15 +100,19 @@
   }
 
   &.scroll {
-    background-color: rgba($color: $color-white, $alpha: 0.9);
+    background-color: $color-white;
+    position: fixed;
 
     .link {
       color: $color-black;
     }
 
     @media screen and (max-width: $md) {
-      background-color: transparent;
-
+      .toggle {
+        svg {
+          color: $color-black;
+        }
+      }
       .link {
         color: $color-white;
       }
