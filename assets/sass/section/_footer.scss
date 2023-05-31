@@ -63,6 +63,9 @@
     small {
       font-size: 12px;
     }
+    small {
+      color: #979797;
+    }
   }
 }
 
@@ -121,15 +124,24 @@ option {
       span {
         width: 100%;
         color: $color-white;
+        display: block;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
       }
-      small {
-        color: #979797;
-      }
+
       a {
         width: 100%;
+        color: $color-white;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
 
         svg {
-          font-size: 22px;
+          font-size: 18px;
         }
       }
     }
